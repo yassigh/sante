@@ -1,0 +1,75 @@
+/* Conteneur principal pour la registration */
+.registration-container {
+    display: flex; /* Utilise Flexbox pour la disposition */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Hauteur de la vue pour centrer verticalement */
+  }
+  
+  /* Conteneur de l'image */
+  .image-container {
+    flex: 1; /* Permet à l'image d'occuper la moitié de l'espace */
+    display: flex;
+    justify-content: center; /* Centrer l'image horizontalement */
+    align-items: center; /* Centrer l'image verticalement */
+  }
+  
+  .registration-image {
+    max-width: 50%; /* Taille moyenne de l'image (50% de la largeur de son conteneur) */
+    height: auto; /* Garde les proportions de l'image */
+  }
+  
+  /* Conteneur du formulaire */
+  .form-container {
+    flex: 1; /* L'autre moitié de l'espace pour le formulaire */
+    padding: 20px;
+  }
+  
+  /* Votre CSS existant pour l'input, etc. reste inchangé */
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Le cercle avant chaque champ de saisie */
+  .input-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%; /* Cercle */
+    background-color: #dc3545; /* Rouge par défaut */
+    margin-right: 10px; /* Espacement entre le cercle et l'input */
+    transition: background-color 0.3s ease; /* Transition pour le changement de couleur */
+  }
+  
+  /* Cercle vert lorsque le champ est valide */
+  .input-circle.valid {
+    background-color: #28a745; /* Vert */
+  }
+  
+  /* Cercle rouge lorsque le champ est invalide et touché */
+  .input-circle.invalid {
+    background-color: #dc3545; /* Rouge */
+  }
+  
+  /* Autres styles inchangés pour les inputs */
+  input {
+    width: 100%; /* Full width for input fields */
+    padding: 12px; /* Padding inside input fields */
+    margin-bottom: 15px; /* Space below input fields */
+    border: 1px solid #28a745; /* Green border (default) */
+    border-radius: 6px; /* Rounded corners for inputs */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+  }
+  
+  /* Erreur sur le champ de saisie */
+  input.ng-invalid.ng-touched {
+    border-color: #dc3545; /* Red border for invalid input */
+  }
+  
+  /* Correcteur pour les champs valides */
+  input.ng-valid.ng-touched {
+    border-color: #28a745; /* Green border for valid input */
+  }
+  

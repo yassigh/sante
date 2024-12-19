@@ -1,0 +1,113 @@
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6abe83;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.back-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.description {
+  font-size: 14px;
+  color: #e0f7df;
+}
+
+.icon {
+  width: 50px; /* Increased icon size */
+  height: 50px; /* Increased icon size */
+}
+
+
+/* Form Container Styling */
+.form-container {
+  background-color: #6abe83;
+  border-radius: 20px;
+  padding: 30px;
+  width: 500px;
+  margin: auto;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.6s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center all children elements */
+}
+
+/* Input Box Styling */
+.input-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-box {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 20px;  /* Increased padding to make more space around the icons */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* Ensure the input box stretches across available space */
+}
+
+.input-box input {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 24px;
+  width: 60%; /* Reduced input width further to create more room for the icon */
+  text-align: center;
+}
+
+.input-box img {
+  width: 60px; /* Increased icon size significantly */
+  height: 60px; /* Increased icon size significantly */
+  margin-left: 20px; /* Added more margin for spacing */
+}
+
+.label {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Save Button Styling */
+.save-button {
+  background-color: #d1d1d1;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 20px; /* Add some space above the button */
+  width: 100%; /* Stretch the button to fit the form width */
+  max-width: 200px; /* Optionally, you can set a max width for the button */
+}
+
+.save-button:hover {
+  background-color: #b5b5b5;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

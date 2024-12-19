@@ -1,0 +1,96 @@
+/* General styles for the login container */
+.login-container {
+    max-width: 400px; /* Set a max width for the login box */
+    margin: 50px auto; /* Center the login box */
+    padding: 20px; /* Add some padding */
+    border-radius: 8px; /* Round the corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    background-color: white; /* White background */
+}
+
+/* Background image styles */
+.login-background {
+    background-image: url('/asserts/s.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    position: relative; /* Position relative for child elements */
+}
+
+/* Styles for headings */
+.login-container h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #28a745; /* Green color for the heading */
+}
+
+/* Form group styles */
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+/* Styles for input fields */
+.form-control {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the input */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Round the input corners */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+/* Input focus styles */
+.form-control:focus {
+    border-color: #28a745; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Styles for the error message */
+.error {
+    color: red; /* Red color for error messages */
+    margin-bottom: 15px; /* Space below the error message */
+}
+
+/* Button styles */
+.btn {
+    display: block; /* Full width button */
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Round corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+}
+
+/* Primary button styles */
+.btn-primary {
+    background-color: #28a745; /* Bootstrap green color */
+    color: white; /* Text color */
+}
+
+/* Button hover styles */
+.btn-primary:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Google Sign-In button styles */
+.btn-danger {
+    background-color: #db4437; /* Google red color */
+    color: white; /* Text color */
+}
+
+/* Google button hover styles */
+.btn-danger:hover {
+    background-color: #c13529; /* Darker red on hover */
+}
+
+/* Additional margin between buttons */
+.google-signin {
+    margin-top: 15px; /* Space above the Google button */
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+    .login-container {
+        margin: 20px; /* Reduce margin on small screens */
+        padding: 15px; /* Reduce padding */
+    }
+}

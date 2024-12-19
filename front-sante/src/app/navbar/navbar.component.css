@@ -1,0 +1,47 @@
+/* General navbar styles */
+.navbar {
+    background-color: #ffffff; /* White background for the navbar */
+    border-bottom: 2px solid #28a745; /* Green border at the bottom */
+}
+
+/* Brand styles */
+.navbar-brand {
+    color: #28a745; /* Green color for the brand */
+    font-weight: bold; /* Bold font weight */
+}
+
+.navbar-brand:hover {
+    color: #218838; /* Darker green on hover */
+}
+
+/* Nav link styles */
+.nav-link {
+    color: #28a745; /* Green color for nav links */
+}
+
+.nav-link:hover {
+    color: #218838; /* Darker green on hover */
+}
+
+/* Active link styles */
+.nav-link.active {
+    font-weight: bold; /* Bold font for active links */
+    border-bottom: 2px solid #28a745; /* Green underline for active links */
+}
+
+/* Navbar toggler styles */
+.navbar-toggler {
+    border-color: #28a745; /* Green border for the toggler */
+}
+
+/* Navbar toggler icon styles */
+.navbar-toggler-icon {
+    background-color: #28a745; /* Green background for the toggler icon */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px; /* Add some padding for smaller screens */
+    }
+}

@@ -1,0 +1,18 @@
+<div *ngIf="errorMessage; else historyList">
+    <p>{{ errorMessage }}</p>
+  </div>
+  
+  <ng-template #historyList>
+    <h2>Water Intake History</h2>
+    <div *ngIf="waterIntakeHistory.length === 0">
+      <p>No water intake records found.</p>
+    </div>
+    <ul>
+      <li *ngFor="let intake of waterIntakeHistory">
+        <strong>Date:</strong> {{ intake.date }} <br>
+        <strong>Time:</strong> {{ intake.time }} <br>
+        <strong>Amount:</strong> {{ intake.amount }} ml
+      </li>
+    </ul>
+  </ng-template>
+  

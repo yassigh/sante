@@ -1,0 +1,22 @@
+{# templates/measurement/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="green-div">
+    {{ form_start(form) }}
+        {{ form_row(form.weight) }}
+        {{ form_row(form.height) }}
+        <button type="submit">Save</button>
+    {{ form_end(form) }}
+</div>
+
+<h3>Your Measurements:</h3>
+<ul>
+    {% for measurement in measurements %}
+        <li>Weight: {{ measurement.weight }} kg, Height: {{ measurement.height }} cm</li>
+    {% else %}
+        <li>No measurements recorded yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

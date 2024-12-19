@@ -1,0 +1,45 @@
+<!-- Navbar -->
+<div class="navbar">
+  <div class="navbar-left">
+    <img src="assets/logo.png" alt="Logo" class="logo">
+    <span class="app-name">Health Track</span> 
+  </div>
+  <div class="navbar-right">
+    <span (click)="navigateTo('categories')" class="nav-link">Home</span> 
+    <span (click)="navigateTo('profile')" class="nav-link">Profile</span>
+    <span (click)="logout()" class="nav-link">Logout</span>
+  </div>
+</div>
+
+
+
+<div class="test-container">
+  <h2>Health Test</h2>
+
+  <div *ngIf="currentQuestionIndex < questions.length">
+    <div class="question">
+      <p>{{ questions[currentQuestionIndex].question }}</p>
+    </div>
+
+    <div class="answers">
+      <button *ngFor="let answer of questions[currentQuestionIndex].answers" 
+              (click)="questions[currentQuestionIndex].selectedAnswer = answer">
+        {{ answer }}
+      </button>
+    </div>
+
+    <div class="navigation">
+      <button (click)="nextQuestion()">Next</button>
+    </div>
+  </div>
+
+  <div *ngIf="currentQuestionIndex === questions.length">
+    <h3>Test Complete</h3>
+    <p>Your responses:</p>
+    <ul>
+      <li *ngFor="let question of questions">
+        {{ question.question }}: {{ question.selectedAnswer }}
+      </li>
+    </ul>
+  </div>
+</div>

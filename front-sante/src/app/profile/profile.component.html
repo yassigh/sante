@@ -1,0 +1,66 @@
+<div class="navbar">
+    <div class="navbar-left">
+      <img src="assets/logo.png" alt="Logo" class="logo">
+      <span class="app-name">Health Track</span> 
+    </div>
+    <div class="navbar-right">
+      <span (click)="navigateTo('profile')" class="nav-link">Profile</span>
+      <span (click)="navigateTo('categories')" class="nav-link">Home</span> 
+  
+      <span (click)="logout()" class="nav-link">Logout</span>
+    </div>
+  </div>
+  
+  <div class="profile-container">
+    <h2>Profile</h2>
+  
+    <!-- Gender selection -->
+    <div class="gender-selection">
+      <h3>Select Your Gender</h3>
+  
+      <div class="gender-images">
+        <div class="gender-option" (click)="selectGender('Male')" [ngClass]="{'selected': profileData.sexe === 'Male'}">
+          <img src="assets/men.jpg" alt="Male" class="gender-img" />
+          <span>Male</span>
+        </div>
+        <div class="gender-option" (click)="selectGender('Female')" [ngClass]="{'selected': profileData.sexe === 'Female'}">
+          <img src="assets/women.jpg" alt="Female" class="gender-img" />
+          <span>Female</span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Profile form -->
+    <form (ngSubmit)="saveProfile()">
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" [(ngModel)]="profileData.age" name="age" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="taille">Height (cm):</label>
+        <input type="number" [(ngModel)]="profileData.taille" name="taille" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="poids_initial">Initial Weight (kg):</label>
+        <input type="number" [(ngModel)]="profileData.poids_initial" name="poids_initial" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="objectif_poids">Target Weight (kg):</label>
+        <input type="number" [(ngModel)]="profileData.objectif_poids" name="objectif_poids" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="niveau_activité">Activity Level:</label>
+        <select [(ngModel)]="profileData.niveau_activite" name="niveau_activité" required>
+          <option value="Low">Low</option>
+          <option value="Moderate">Moderate</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+  
+      <button type="submit">Save Profile</button>
+    </form>
+  </div>

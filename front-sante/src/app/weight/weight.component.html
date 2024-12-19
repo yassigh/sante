@@ -1,0 +1,29 @@
+<!-- Navbar -->
+<div class="navbar">
+  <div class="left-section">
+    <a class="back-link" routerLink="/">
+      <span>&larr;</span> Weight & BMI
+    </a>
+    <span class="description">New record</span>
+  </div>
+  <img src="assets/measure.png" alt="Scale Icon" class="icon" />
+</div>
+
+<!-- Form Section -->
+<div class="form-container">
+  <div class="input-container">
+    <div class="input-box">
+      <input [(ngModel)]="weight" type="number" placeholder="60.0" />
+      <img src="assets/kitchen-scale.png" alt="Edit Icon" />
+    </div>
+    <p class="label">Weight (kg)</p>
+  </div>
+  <div class="input-container">
+    <div class="input-box">
+      <input [(ngModel)]="height" type="number" placeholder="170.0" />
+      <img src="assets/height.png" alt="Edit Icon" />
+    </div>
+    <p class="label">Height (cm)</p>
+  </div>
+  <button class="save-button" (click)="save()">Save</button>
+</div>

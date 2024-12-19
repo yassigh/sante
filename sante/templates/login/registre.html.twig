@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{ asset('assets/s.jpg') }}" alt="Santé" class="img-fluid" />
+        </div>
+        <div class="col-md-6">
+            <h2 class="text-center">Sign Up</h2>
+            <form method="POST" action="{{ path('api_register') }}">
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <span class="status-circle" id="prenom-status"></span>
+                        <label for="prenom">Prénom <span class="text-danger">*</span></label>
+                        <input type="text" id="prenom" name="prenom" class="form-control" placeholder="Entrez votre prénom" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <span class="status-circle" id="nom-status"></span>
+                        <label for="nom">Nom <span class="text-danger">*</span></label>
+                        <input type="text" id="nom" name="nom" class="form-control" placeholder="Entrez votre nom" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <span class="status-circle" id="email-status"></span>
+                        <label for="email">Email <span class="text-danger">*</span></label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Entrez votre email" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <span class="status-circle" id="password-status"></span>
+                        <label for="password">Mot de passe <span class="text-danger">*</span></label>
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Entrez votre mot de passe" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <a href="{{ path('api_signin') }}" class="btn btn-link">Déjà inscrit ? Connectez-vous ici</a>
+                </div>
+                <button type="submit" class="btn btn-primary">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

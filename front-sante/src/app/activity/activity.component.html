@@ -1,0 +1,83 @@
+<app-navbar></app-navbar>
+<main class="activity-container">
+  <section class="activity-content">
+    <div class="activity-column">
+      <header class="activity-header">
+        <label for="time-period">Sélectionner une période :</label>
+        <select id="time-period" [(ngModel)]="selectedPeriod">
+          <option value="jour">Jour</option>
+          <option value="semaine">Semaine</option>
+          <option value="mois">Mois</option>
+        </select>
+
+        <div class="activity-card">
+          <label for="age">Âge :</label>
+          <input
+            type="number"
+            name="age"
+            id="age"
+            [(ngModel)]="age"
+            placeholder="Entrez votre âge"
+          />
+
+          <div class="activity-info">
+            <label for="activity">Activité :</label>
+            <input
+              type="text"
+              name="activity"
+              id="activity"
+              [(ngModel)]="selectedActivity"
+              placeholder="Entrez l'activité"
+            />
+          </div>
+
+          <label for="time">Durée (heures) :</label>
+          <input
+            type="number"
+            name="time"
+            id="time"
+            [(ngModel)]="time"
+            (input)="checkGoal()"
+          />
+        </div>
+
+        <!-- Indicateur d'objectif atteint ou non -->
+        <div
+          class="goal-achievement"
+          [style.backgroundColor]="goalReached ? 'blue' : 'red'"
+          [style.color]="'white'"
+        >
+          <p>
+            {{ goalReached
+              ? 'Vous avez atteint l\'objectif !'
+              : 'Vous n\'avez pas atteint l\'objectif !' }}
+          </p>
+        </div>
+
+        <button (click)="submitActivity()">Enregistrer</button>
+      </header>
+    </div>
+
+    <!-- Historique des activités -->
+    <div class="history-column">
+      <section class="history-section">
+        <h2 class="history-title">Historique des activités</h2>
+        <article *ngIf="activities && activities.length > 0; else noActivities">
+          <ul class="activity-history-list">
+            <li *ngFor="let activity of activities">
+              <p>
+                <strong>{{ activity.nom }}</strong> - {{ activity.heure }} heures
+              </p>
+              <time class="history-date">
+                {{ activity.createdAt | date: 'yyyy-MM-dd HH:mm' }}
+              </time>
+            </li>
+          </ul>
+        </article>
+        <ng-template #noActivities>
+          <p>Aucune activité enregistrée pour le moment.</p>
+        </ng-template>
+      </section>
+    </div>
+  </section>
+</main>

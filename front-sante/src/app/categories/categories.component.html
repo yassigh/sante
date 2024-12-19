@@ -1,0 +1,52 @@
+<div class="navbar">
+  <div class="navbar-left"><a href="http://localhost:4200/home">
+    <img src="assets/logo.png" alt="Logo" class="logo">
+    <span class="app-name">Health Track</span> </a>
+  </div>
+  <div class="navbar-right">
+    <span (click)="navigateTo('profile')" class="nav-link">Profile</span>
+    <span (click)="logout()" class="nav-link">Logout</span>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Row 1: 3 Cards -->
+
+  
+  <div class="card" (click)="navigateTo('weight')">
+    <div class="card-content">
+      <img src="assets/weight.png" alt="Weight Icon" class="card-img">
+      <h3>Weight & Size</h3>
+      <hr>
+      <p>Weight influences overall health on a daily basis.</p>
+    </div>
+  </div>
+
+  <div class="card" (click)="navigateTo('water-reminder')">
+    <div class="card-content">
+      <img src="assets/water-reminder.png" alt="Water Reminder Icon" class="card-img">
+      <h3>Water Reminder</h3>
+      <hr>
+      <p>Water recall is essential for hydration.</p>
+    </div>
+  </div>
+
+  <!-- Row 2: Centered 2 Cards -->
+  <div class="card" (click)="navigateTo('activity')">
+    <div class="card-content">
+      <img src="assets/activity.png" alt="Activity Icon" class="card-img">
+      <h3>Activity</h3>
+      <hr>
+      <p>Physical activity improves health and endurance.</p>
+    </div>
+  </div>
+
+  <div class="card" (click)="navigateTo('lifestyle')">
+    <div class="card-content">
+      <img src="assets/lifestyle.png" alt="Lifestyle Icon" class="card-img">
+      <h3>Lifestyle</h3>
+      <hr>
+      <p>Explore healthy lifestyle choices and personalized tips.</p>
+    </div>
+  </div>
+</div>

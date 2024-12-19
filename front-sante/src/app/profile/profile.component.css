@@ -1,0 +1,177 @@
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;  /* Space between logo and buttons */
+    align-items: center;
+    background-color: #8ACB88;  /* Light green background */
+    padding: 15px 20px;
+    font-size: 1.2em;
+    color: white;
+  }
+  
+  /* Left Section (Logo + App Name) */
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;  /* Space between logo and app name */
+  }
+  
+  /* Right Section (Profile and Logout buttons) */
+  .navbar-right {
+    display: flex;
+    gap: 20px;  /* Space between profile and logout buttons */
+    align-items: center;
+  }
+  
+  /* Logo Styling */
+  .logo {
+    width: 50px;  /* Set logo size */
+    height: auto;
+  }
+  
+  /* Navbar Links Styling */
+  .navbar .nav-link {
+    cursor: pointer;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar .nav-link:hover {
+    background-color: #6caa7e;  /* Slightly darker green on hover */
+    border-radius: 5px;
+  }
+  
+  /* App Name Styling */
+  .app-name {
+    font-size: 1.5em;  /* Larger text for app name */
+    font-weight: bold;
+  }
+  
+  /* App Name Styling */
+  .app-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-left: 10px;  /* Space between logo and app name */
+  }
+  
+  /* Navbar Links */
+  .nav-link {
+    font-size: 1.4rem;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover Effect for Navbar Links */
+  .nav-link:hover {
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Specific hover effect for Logout button */
+  .nav-link.logout:hover {
+    color: red; /* Change text color to red on hover */
+  }
+
+
+
+  .profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f7f6;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+  }
+  
+  h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .gender-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .gender-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .gender-option {
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .gender-option img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  .gender-option.selected img {
+    transform: scale(1.1);
+    border: 2px solid #4CAF50;
+  }
+  
+  .gender-option span {
+    display: block;
+    margin-top: 5px;
+    font-size: 1em;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }

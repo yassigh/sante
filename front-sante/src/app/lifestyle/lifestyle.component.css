@@ -1,0 +1,215 @@
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;  /* Space between logo and buttons */
+  align-items: center;
+  background-color: #8ACB88;  /* Light green background */
+  padding: 15px 20px;
+  font-size: 1.2em;
+  color: white;
+}
+
+/* Left Section (Logo + App Name) */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;  /* Space between logo and app name */
+}
+
+/* Right Section (Profile and Logout buttons) */
+.navbar-right {
+  display: flex;
+  gap: 20px;  /* Space between profile and logout buttons */
+  align-items: center;
+}
+
+/* Logo Styling */
+.logo {
+  width: 50px;  /* Set logo size */
+  height: auto;
+}
+
+/* App Name Styling */
+.app-name {
+  font-size: 1.5rem;  /* Larger text for app name */
+  font-weight: bold;
+  color: white;
+  margin-left: 10px;  /* Space between logo and app name */
+}
+
+/* Navbar Links Styling */
+.navbar .nav-link {
+  cursor: pointer;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Navbar Links */
+.navbar .nav-link:hover {
+  background-color: #6caa7e;  /* Slightly darker green on hover */
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  transform: scale(1.05);  /* Slight scale-up effect */
+}
+
+/* Specific hover effect for Logout button */
+.navbar .nav-link.logout:hover {
+  color: red; /* Change text color to red on hover */
+}
+
+/* Responsive Navbar - Optional, for smaller screens */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-left {
+    margin-bottom: 10px;
+  }
+  .navbar-right {
+    gap: 15px;
+  }
+}
+
+
+/* Music Section Styles */
+.lifestyle-page {
+  padding: 20px;
+}
+
+.music-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.music-section select {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Container for the cards, aligned at the top of the page */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;  /* Allow wrapping of cards */
+  justify-content: space-between;  /* Space out cards */
+  gap: 20px;  /* Space between cards */
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Card Styling */
+.card {
+  width: 100%;
+  max-width: 300px;  /* Adjust max-width for responsive cards */
+  border-radius: 10px;  /* Rounded corners */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.card-link {
+  display: block;
+  text-decoration: none;  /* Remove underline */
+  color: inherit;  /* Inherit the card's text color */
+}
+/* Card Hover Effects */
+.card:hover {
+  transform: translateY(-5px);  /* Slight upward movement on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);  /* Stronger shadow on hover */
+}
+
+/* Card Content Styling */
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Card Image */
+.card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;  /* Rounded corners for the image */
+  object-fit: cover;  /* Ensures the image covers the area without distorting */
+  max-height: 180px;  /* Limit the height of the image */
+}
+
+/* Card Title Styling */
+.card-content h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 15px 0 10px;
+  color: #333;  /* Dark text for readability */
+}
+
+/* Card Description */
+.card-content p {
+  font-size: 1rem;
+  color: #666;  /* Lighter text color for description */
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+/* Horizontal Divider */
+.card-content hr {
+  border: 0;
+  height: 1px;
+  background-color: #ddd;  /* Light grey divider */
+  margin-bottom: 15px;
+}
+
+/* Big Card for Test Goals */
+.big-card {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f4f4f4;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 50px;
+}
+
+.big-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.big-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.big-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Styling for the image inside the big card */
+.card-img-large {
+  width: 100%;
+  height: 200px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensure the image fills the space without distortion */
+  margin-bottom: 20px; /* Add space between the image and text */
+}
+
+.section {
+  margin-bottom: 60px; /* Add space between sections */
+}
+
+.section:last-child {
+  margin-bottom: 0; /* No margin for the last section */
+}

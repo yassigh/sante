@@ -1,0 +1,20 @@
+<!-- Navbar -->
+<div class="navbar">
+  <div class="navbar-left">
+    <img src="assets/logo.png" alt="Logo" class="logo">
+    <span class="app-name">Health Track</span> 
+  </div>
+  <div class="navbar-right">
+    <span (click)="navigateTo('categories')" class="nav-link">Home</span> 
+    <span (click)="navigateTo('profile')" class="nav-link">Profile</span>
+    <span (click)="logout()" class="nav-link">Logout</span>
+  </div>
+</div>
+
+
+
+<div class="article-detail">
+  <img [src]="'assets/' +article.image" alt="Article Image" class="article-img">
+  <h1>{{ article.title }}</h1>
+  <p>{{ article.content }}</p>
+</div>

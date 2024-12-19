@@ -1,0 +1,76 @@
+<!-- Navbar -->
+<div class="navbar">
+  <div class="navbar-left">
+    <img src="assets/logo.png" alt="Logo" class="logo">
+    <span class="app-name">Health Track</span> 
+  </div>
+  <div class="navbar-right">
+    <span (click)="navigateTo('categories')" class="nav-link">Home</span> 
+    <span (click)="navigateTo('profile')" class="nav-link">Profile</span>
+    <span (click)="logout()" class="nav-link">Logout</span>
+  </div>
+</div>
+
+<div class="lifestyle-page">
+
+  <!-- Music Section -->
+
+<section class="section music-section">
+  <h2>Music for Your Lifestyle</h2>
+  <p>Select a genre to filter music for your mood:</p>
+
+  <select [(ngModel)]="selectedGenre" (change)="fetchMusicByGenre()">
+    <option value="">All Genres</option>
+    <option value="relax">Relax</option>
+    <option value="sleep">Sleep</option>
+    <option value="focus">Focus</option>
+    <!-- Add more genre options here -->
+  </select>
+
+  <!-- Cards for Music -->
+  <div class="card-container">
+    <div *ngFor="let song of musicList" class="card" (click)="playMusic(song)">
+      <a [href]="song.link" target="_blank" class="card-link">
+      <div class="card-content">
+        <img src="assets/music2.png" alt="Play Music" class="card-img">
+        <h3>{{ song.title }}</h3>
+        <p>Artist: {{ song.artist }}</p>
+        
+      </div>
+      </a>
+    </div>
+  </div>
+</section>
+</div>
+
+ <!-- Test Goals Card Section -->
+ <section class="section test-goals-section">
+  <div class="card big-card" (click)="navigateToTest()">
+    <div class="card-content">
+      <img src="assets/test.png" alt="Take Care" class="card-img-large">
+      <h3>Take the Health Test</h3>
+      <p>
+        Discover more about your health by answering some simple questions. 
+        This test will help you understand your lifestyle and provide tips for improvement.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Article Section Card -->
+
+<section class="section article-section">
+  <h2>Articles for Your Lifestyle</h2>
+
+  <div class="card-container">
+    <div *ngFor="let article of articleList" class="card" (click)="navigateToArticle(article)">
+      <div class="card-content">
+        <img [src]="'assets/'+article.image" alt="Article Image" class="card-img">
+        <h3>{{ article.title }}</h3>
+        <p>{{ article.subject }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+

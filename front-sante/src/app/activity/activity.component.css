@@ -1,0 +1,111 @@
+:host {
+    display: contents;
+  }
+  .activity-container {
+    align-self: center;
+    margin-top: 29px;
+    width: 100%;
+    max-width: 1109px;
+  }
+  .activity-content {
+    display: flex;
+    gap: 20px;
+  }
+  .activity-column, .history-column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  .activity-header {
+    display: flex;
+    margin-top: 25px;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    font: 700 20px Inter, sans-serif;
+  }
+  .activity-card {
+    border-radius: 40px;
+    background-color: #c6f1c9;
+    align-self: stretch;
+    display: flex;
+    margin-top: 21px;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    padding: 86px 45px;
+  }
+  .activity-info {
+    display: flex;
+    gap: 14px;
+  }
+  .activity-type {
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+  .activity-divider {
+    width: 1px;
+    height: 34px;
+    border: 1px solid #000;
+  }
+  .activity-duration {
+    margin-top: 39px;
+  }
+  .goal-achievement {
+    border-radius: 15px;
+    background-color: rgba(101, 236, 251, 0.26);
+    margin-top: 31px;
+    width: 324px;
+    max-width: 100%;
+    padding: 47px 18px;
+  }
+  .history-section {
+    border-radius: 40px;
+    background-color: #c6f1c9;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    width: 100%;
+    padding: 49px 66px 256px;
+    font: 700 20px Inter, sans-serif;
+  }
+  .history-title {
+    align-self: start;
+  }
+  .history-entry {
+    margin-top: 32px;
+  }
+  .history-date {
+    color: #787878;
+  }
+  @media (max-width: 991px) {
+    .activity-container {
+      max-width: 100%;
+    }
+    .activity-content {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+    .activity-column, .history-column {
+      width: 100%;
+    }
+    .activity-header {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+    .activity-card {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+    .goal-achievement {
+      padding-right: 20px;
+    }
+    .history-section {
+      max-width: 100%;
+      margin-top: 40px;
+      padding: 0 20px 100px;
+    }
+  }
+  

@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+<div class="registration-container">
+  <div class="image-container">
+    <img src="assets/s.jpg" alt="Description of image" class="registration-image" />
+  </div>
+  
+  <div class="form-container">
+    <h2>Register</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="nom" class="required">Nom:</label>
+        <div class="input-wrapper">
+          <div class="input-circle" [ngClass]="{'valid': registrationForm.get('nom')?.valid, 'invalid': registrationForm.get('nom')?.invalid && registrationForm.get('nom')?.touched}"></div>
+          <input id="nom" formControlName="nom" class="form-control" />
+        </div>
+        <span class="error-point" *ngIf="registrationForm.get('nom')?.invalid && registrationForm.get('nom')?.touched">•</span>
+      </div>
+      
+      <div class="form-group">
+        <label for="prenom" class="required">Prénom:</label>
+        <div class="input-wrapper">
+          <div class="input-circle" [ngClass]="{'valid': registrationForm.get('prenom')?.valid, 'invalid': registrationForm.get('prenom')?.invalid && registrationForm.get('prenom')?.touched}"></div>
+          <input id="prenom" formControlName="prenom" class="form-control" />
+        </div>
+        <span class="error-point" *ngIf="registrationForm.get('prenom')?.invalid && registrationForm.get('prenom')?.touched">•</span>
+      </div>
+      
+      <div class="form-group">
+        <label for="email" class="required">Email:</label>
+        <div class="input-wrapper">
+          <div class="input-circle" [ngClass]="{'valid': registrationForm.get('email')?.valid, 'invalid': registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched}"></div>
+          <input id="email" type="email" formControlName="email" class="form-control" />
+        </div>
+        <span class="error-point" *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched">•</span>
+      </div>
+      
+      <div class="form-group">
+        <label for="password" class="required">Mot de passe:</label>
+        <div class="input-wrapper">
+          <div class="input-circle" [ngClass]="{'valid': registrationForm.get('password')?.valid, 'invalid': registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched}"></div>
+          <input id="password" type="password" formControlName="password" class="form-control" />
+        </div>
+        <span class="error-point" *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched">•</span>
+      </div>
+      
+      <button type="submit">Register</button>
+    </form>
+    
+    <a routerLink="/login" class="btn btn-link">Already have an account? Login</a>
+  </div>
+</div>

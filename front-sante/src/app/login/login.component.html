@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div class="login-container">
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <h2>Login</h2>
+      <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" type="password" formControlName="password" class="form-control" />
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+    </form>
+    
+    <div id="g_id_onload"
+     data-client_id="390286337775-ujmjif3sm2p6hulijo68kk9iobl9mi7k.apps.googleusercontent.com"
+     data-context="signin"
+     data-login_uri="http://localhost:4200/categories"
+     data-auto_select="true"
+     data-itp_support="true">
+</div>
+</div>
