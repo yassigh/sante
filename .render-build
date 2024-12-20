@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Build le frontend Angular
+echo "Building Angular frontend..."
+cd front-sante
+yarn install
+yarn build
+
+# Déplacer les fichiers build Angular vers le dossier public du backend Symfony
+echo "Copying Angular build to Symfony public folder..."
+cp -r dist/front-sante/* ../sante/public/
+
+# Installer les dépendances du backend Symfony
+echo "Installing Symfony dependencies..."
+cd ../sante
+composer install --no-dev --optimize-autoloader
